@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Gustavo Henrique Farias</title>
+    <link rel="stylesheet" type="text/css" href="css/main_css.css">
+    <link rel="stylesheet" type="text/css" href="css/habilidades.css">
+    <link rel="stylesheet" type="text/css" href="css/timeline.css">
+    <link rel="stylesheet" type="text/css" href="css/projetos.css">
+    <style>
+	/* Styles for Larger Screens */
+
+#habilidades {
+    position: relative;
+    overflow: hidden;
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+#video-background {
+    width: 100%;
+    height: auto;
+}
+
+.conteudo-habilidades {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.habilidade {
+    cursor: pointer;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(189, 48, 48);
+    margin: 5px;
+    border-radius: 5px;
+    font-size: 24px;
+    color: #fff;
+    transition: transform 0.2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.h1 {
+    font-size: 80px; /* Adjustable font size as needed */
+}
+
+.clique {
+    transform: scale(0.9);
+    transition: transform 0.2s;
+}
+
+#carrosel {
+    display: flex;
+    overflow: hidden;
+}
+
+.sombra,
+.hidden {
+    display: flex; /* Show all skills all the time */
+}
+
+.visible {
+    display: flex;
+}
+
+#experiencia h1 {
+    text-align: center;
+    font-size: 3em;
+    margin-bottom: 80px;
+}
+
+.descricao_atividades,
+.titulo_cargo {
+    color: black;
+}
+
+#experiencia {
+    position: relative;
+    overflow: hidden;
+}
+
+#experiencia::after {
+    content: '';
+    position: absolute;
+    width: 6px;
+    background-color: white;
+    top: 80px;
+    bottom: 0;
+    left: 50%;
+    margin-left: -3px;
+}
+
+.container {
+    padding: 10px 40px;
+    position: relative;
+    width: 40%;
+    background-color: transparent;
+}
+
+.container::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: white;
+    border: 4px solid #FF9F55;
+    top: 15px;
+    border-radius: 50%;
+}
+
+.left,
+.right {
+    box-sizing: border-box;
+    width: 50%;
+    position: relative;
+}
+
+.left {
+    right: 0;
+    transform: translateX(-0%);
+}
+
+.right {
+    left: 0;
+    transform: translateX(100%);
+}
+
+.left::before,
+.right::before {
+    content: " ";
+    position: absolute;
+    top: 22px;
+    border: medium solid white;
+}
+
+.left::before {
+    right: 30px;
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+}
+
+.right::before {
+    left: 30px;
+    border-width: 10px 10px 10px 0;
+    border-color: transparent white transparent transparent;
+}
+
+.right::after {
+    left: -16px;
+}
+
+.content {
+    padding: 20px 30px;
+    background-color: white;
+    border-radius: 6px;
+}
+
+.button {
+    background-color: black;
+    color: #ffffff;
+    /* Text color on the button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 18px;
+}
+
+.button:hover {
+    background-color: #001a33;
+    /* Background color when the mouse is over the button */
+}
+
+.button:active {
+    background-color: #004080;
+    /* Background color when the button is pressed */
+}
+
+/* Styles for Videos and Video Container */
+.video-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.video {
+    margin: 20px;
+    text-align: center;
+}
+
+#rodapeButton {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    background-color: #0a0a0a;
+    /* Additional styles as needed */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #0a0a0a;
+    color: #030303;
+    /* White text color */
+    /* Additional styles as needed */
+}
+
+/* Media Query for Tablet */
+@media only screen and (max-width: 767px) {
+    /* Add specific styles for tablets here */
+    .container {
+        width: 60%; /* Adjusted width for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media only screen and (max-width: 480px) {
+    /* Add specific styles for mobile devices here */
+    .h1 {
+        font-size: 40px; /* Adjusted font size for mobile */
+    }
+
+    #experiencia h1 {
+        font-size: 2em; /* Adjusted font size for mobile */
+        margin-bottom: 50px; /* Adjusted margin as needed */
+    }
+
+    .container {
+        width: 80%; /* Adjusted width for mobile */
+    }
+}
+
+  
+
+	  /* Adicione estilos conforme necessário */
+	  
+  </style>
+<body>
+
+	<body style="background-color: black;"></body>
+
+	<main>
+		<div id="all-menu">
+
+			<img id="foto-perfil" src="perfil2.jpg">
+			<h1>Gustavo Henrique Farias</h1>
+
+			<nav id="menu">
+				<ul>
+					
+					<li><a href="#habilidades">Habilidades</a></li>
+					<li><a href="#experiencia">Experiência</a></li>
+					<li><a href="#projetos">Projetos</a></li>
+					<li><a href="dashboard.html">Power Bi</a></li>
+					<li><a href="sites.html">Sites</a></li>
+					<li><a href="Blog.html">Noticias</a></li>
+					
+				</ul>
+			</nav>
+
+			<ul id="redes-sociais">
+				<a href="https://www.linkedin.com/in/gustavohenriquefarias/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+				<a href="https://github.com/Gustavolobosolitario" target="_blank"><i class="fa-brands fa-github"></i></a>
+				
+			</ul>
+		</div>
+
+		<section id="apresentacao">
+			<div id="mascara-texto-apresentacao">
+			  <div id="texto-apresentacao">
+				<p>"Olá! Sou Gustavo Farias, um Data Analytics apaixonado por transformar dados em insights estratégicos. Com expertise em Python, SQL e automação de processos (RPA). Vamos juntos potencializar seus dados! 💡🚀"</p>
+				<a class="curriculo" href="Currículo l Gustavo Henrique Farias 2025.pdf" target="_blank">Baixar Currículo</a>
+			  </div>
+			</div>
+		  </section>
+		  
+		  <script>
+			function typeWriter(elementos) {
+
+				console.log(elementos[0])
+			
+						  
+					   paragrafo_fatiado = elementos[0].innerHTML.split('')
+					   elementos[0].innerHTML = '';
+					   paragrafo_fatiado.forEach((letra, i) => {
+			
+						   setTimeout(() => {
+							if (letra == "|"){
+								elementos[0].innerHTML += "<br>"
+							  }
+							  else{
+								elementos[0].innerHTML += letra
+							  }
+			
+							  if (i == paragrafo_fatiado.length - 1){
+								  dowload_curriculo.style.transition = "all 2s"
+								  dowload_curriculo.style.opacity = '1'
+			
+							  }
+						}
+						  , 75 * i)
+					  })
+			
+			}
+			
+			
+			
+			const titulo = document.querySelectorAll('p')
+			var dowload_curriculo = document.querySelector('.curriculo')
+			
+													
+			typeWriter(titulo)
+			/*fim efeito d digitação*/
+			
+			
+			/*inicio efito de scrool suave*/
+			const menuLinks = document.querySelectorAll('#menu ul li a[href^="#"]');
+			  
+			
+			function getDistanceFromTheTop(element) {
+			  const id = element.getAttribute("href");
+			  return document.querySelector(id).offsetTop;
+			}
+			
+			
+			function scrollToSection(event) {
+				
+			  event.preventDefault();
+			  const distanceFromTheTop = getDistanceFromTheTop(event.target);
+			  smoothScrollTo(0, distanceFromTheTop, 1000);
+			}
+			
+			menuLinks.forEach((link) => {
+			  link.addEventListener("click", scrollToSection);
+			});
+			
+			function smoothScrollTo(endX, endY, duration) {
+			  const startX = window.scrollX || window.pageXOffset;
+			  const startY = window.scrollY || window.pageYOffset;
+			  const distanceX = endX - startX;
+			  const distanceY = endY - startY;
+			  const startTime = new Date().getTime();
+			
+			  duration = typeof duration !== "undefined" ? duration : 400;
+			
+			  const easeInOutQuart = (time, from, distance, duration) => {
+				if ((time /= duration / 2) < 1)
+				  return (distance / 2) * time * time * time * time + from;
+				return (-distance / 2) * ((time -= 2) * time * time * time - 2) + from;
+			  };
+			
+			  const timer = setInterval(() => {
+				const time = new Date().getTime() - startTime;
+				const newX = easeInOutQuart(time, startX, distanceX, duration);
+				const newY = easeInOutQuart(time, startY, distanceY, duration);
+				if (time >= duration) {
+				  clearInterval(timer);
+				}
+				window.scroll(newX, newY);
+			  }, 1000 / 60);
+			}
+
+
+
+			
+		  </script>
+
+
+
+		  <body>
+			
+			<section id="habilidades">
+				<div class="video-container">
+					<video autoplay muted loop id="video-background">
+						<source src="AdobeStock_624560522_Video_HD_Preview.mov" type="video/mp4">
+						<!-- Fallback para navegadores que não suportam vídeo -->
+					</video>
+				</div>
+				<div class="conteudo-habilidades">
+					<h1>Habilidades</h1>
+			
+				<div id="carrosel">
+				  <div class="centro" onclick="playAudio('CSS')">
+					<div class="habilidade">
+					  <p>DAX</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="direita" onclick="playAudio('JS')">
+					<div class="habilidade">
+					  <p>M</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="esquerda" onclick="playAudio('HTML')">
+					<div class="habilidade">
+					  <p>SQL</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <!-- Adicione outras habilidades conforme necessário -->
+			
+				  <div class="hidden" onclick="playAudio('Python')">
+					<div class="habilidade">
+					  <p>Python</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="hidden" onclick="playAudio('Power BI')">
+					<div class="habilidade">
+					  <p>BI</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="hidden" onclick="playAudio('POO')">
+					<div class="habilidade">
+					  <p>POO</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="hidden" onclick="playAudio('Flask')">
+					<div class="habilidade">
+					  <p>EXCEL</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+			
+				  <div class="hidden" onclick="playAudio('Django')">
+					<div class="habilidade">
+					  <p>MYSQL</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+
+				  <div class="hidden" onclick="playAudio('Django')">
+					<div class="habilidade">
+					  <p>API</p>
+					</div>
+					<div class="sombra"></div>
+				  </div>
+
+				  
+			
+				  <!-- Adicione mais habilidades conforme necessário -->
+			
+				</div>
+			  </section>
+			
+			  <script>
+				const habilidades = document.querySelectorAll('.habilidade');
+			
+				habilidades.forEach(habilidade => {
+				  habilidade.addEventListener('mouseover', () => {
+					habilidade.classList.add('clique');
+				  });
+			
+				  habilidade.addEventListener('mouseout', () => {
+					habilidade.classList.remove('clique');
+				  });
+				});
+			
+				function playAudio(skill) {
+				  console.log('Reproduzindo áudio para: ' + skill);
+				  // Adicione aqui a lógica para reproduzir o áudio da habilidade correspondente
+				}
+			  </script>
+				<!-- Adicione outras habilidades escondidas aqui -->
+		
+			</div>
+		
+			<!-- Controles do carrossel -->
+			<nav id="controle-carrosel-habilidades">
+				<a id="voltar" href="#"><i class="fa-solid fa-circle-chevron-left"></i></a>
+				<a id="avancar" href="#"><i class="fa-solid fa-circle-chevron-right"></i></a>
+			</nav>
+		</section>
+		
+		<section id="experiencia">
+			<h1>Experiência</h1>
+			
+
+
+			<div class="container right">
+				<div class="content">
+					<h2 class="titulo_cargo">Analista de dados / Suporte</h2>
+					<p class="descricao_atividades">
+						Analista de Dados na NSF Tecnologia em Instalações Comerciais desde 2021. Tenho um papel
+                        essencial no suporte técnico e na análise de dados da empresa.
+                        Como Analista de Dados, utilizo minhas habilidades analíticas para extrair insights valiosos
+                        dos dados disponíveis, fornecendo informações estratégicas
+                        para tomada de decisões em conjunto com as diversas áreas da empresa.
+                        Minha responsabilidade inclui solucionar "bugs" no sistema de orçamento, atendendo chamados
+                        de clientes internos com agilidade e eficiência.
+                        Além disso, sou responsável pelo cadastro de produtos e tenho experiência em ferramentas como
+                        WBCCAD, WBCAPP e Excel. Contribuo também com a configuração
+                        de equipamentos e aplicativos, garantindo o bom funcionamento da infraestrutura tecnológica.
+						<br><br>
+						 Ferramentas utilizadas: 
+						Power BI, SQL, RPA, EXCEL.
+					</p>
+				</div>
+			</div>
+		
+
+
+						
+
+						 
+					</p>
+				</div>
+			</div>
+		
+			<div class="container left" >
+				<div class="content">
+					<h2 class="titulo_cargo">Experiencia como Gerente de Automação de Processos e Análise de Dados (PJ)</h2>
+<p class="descricao_atividades">
+    <strong>Período:</strong> 01/2023 – Momento<br>
+    <strong>Cidade:</strong> São Carlos<br>
+    <strong>Formato:</strong> PJ<br>
+    <strong>Empresa:</strong> Core Data and Technology<br><br>
+
+    Sou responsável por liderar uma equipe de desenvolvimento para automatizar processos empresariais e extrair insights valiosos dos dados disponíveis. Trabalho em conjunto com a equipe para identificar oportunidades de automação e implementar soluções eficazes, utilizando ferramentas avançadas como Selenium e AWS Lambda. Adotamos um modelo de trabalho baseado em Scrum para garantir a agilidade e eficiência em nossos projetos. Desenvolvo robôs tanto atendidos como não atendidos, criando soluções inovadoras que otimizam as operações da empresa.<br><br>
+
+    <strong>Habilidades e Atividades Principais:</strong><br>
+    - Selenium;<br>
+    - AWS Lambda;<br>
+    - Modelo de trabalho baseado em Scrum;<br>
+    - Desenvolvimento de robôs atendidos e não atendidos;<br>
+    - Documentação técnica e de negócios relacionadas às soluções de automação desenvolvidas;<br>
+    - Testar e depurar soluções de automação para garantir que funcionem conforme o esperado;<br>
+    - Web, incluindo a criação e execução de scripts de teste automatizados;<br>
+    - Habilidade em resolução de problemas e análise de dados;<br>
+    - Habilidade em comunicação e colaboração com outros membros da equipe e partes interessadas externas;<br>
+    - Criação e manutenção de scripts em Python para a extração de dados (web scraping);<br>
+    - ETL dos dados capturados e upload para S3 bem como o banco MySQL;<br>
+    - AWS Lambda e Step Functions;<br>
+    - Consumo e criação de APIs REST;<br>
+    - Javascript;<br>
+    - HTML;<br>
+    - CSS.
+</p>
+
+
+    <strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
+</p>
+				</div>
+			</div>
+
+			<div class="container right">
+				<div class="content">
+					<h2 class="titulo_cargo">Experiencia como Desenvolvedor RPA Pleno (PJ)</h2>
+<p class="descricao_atividades">
+    <strong>Período:</strong> Contrato de Projeto<br>
+    <strong>Cidade:</strong> São Carlos SP<br>
+    <strong>Formato:</strong> PJ<br>
+    <strong>Empresa:</strong> Nick Saude<br><br>
+    
+    Sou um Desenvolvedor RPA Pleno, contribuindo de maneira estratégica na automação de processos na [Nome da Empresa]. Minha atuação abrange o desenvolvimento de bots especializados para otimizar operações e extrair insights valiosos dos dados disponíveis.<br><br>
+
+    <strong>Responsabilidades Principais:</strong>
+    - Desenvolvimento de robôs com ênfase em automação de processos utilizando ferramentas como [Nome das Ferramentas RPA].
+    - Colaboração estreita com equipes para identificar oportunidades de automação e implementação de soluções eficazes.
+    - Adoção de modelos ágeis, como Scrum, para garantir agilidade e eficiência nos projetos.
+    - Desenvolvimento de bots atendidos e não atendidos, proporcionando soluções inovadoras que otimizam as operações da empresa.
+    - Documentação técnica e de negócios relacionadas às soluções de automação desenvolvidas.<br><br>
+
+    <strong>Conquistas e Resultados:</strong>
+    - Implementação eficaz de automações nos processos, com destaque para a automação do processo de autenticação de pacientes.
+    - Desenvolvimento de automações para autenticação de pacientes, reconhecimento de elegibilidade e análise de autorização.
+    - Realização de melhorias significativas na eficiência operacional e na extração de insights por meio da automação.<br><br>
+
+
+    <strong>Habilidades Adquiridas:</strong>
+    - Automação de Processos.
+    - Desenvolvimento de Sistemas RPA.
+    - Análise de Dados.
+    - Colaboração em Equipes Ágeis.
+    - Resolução de Problemas em Automação.
+    - Documentação Técnica.<br><br>
+
+    <strong>Ferramentas Utilizadas:</strong> RPA, UiPath, Automation Anywhere.<br>
+    <strong>Linguagens:</strong> Python, Javascript, C#<br>
+    <strong>Outras Habilidades:</strong> AWS, Git, Docker, Oracle.
+</p>
+
+
+
+				</div>
+			</div>
+			<div class="container left" >
+				<div class="content">
+					<h2 class="titulo_cargo">Experiencia como Analista e Desenvolvedor de Sistemas Senior- BI (PJ)</h2>
+<p class="descricao_atividades">
+    <strong>Período:</strong> 07/2023 – 06/2024<br>
+    <strong>Cidade:</strong> São Carlos<br>
+    <strong>Formato:</strong> PJ<br>
+    <strong>Empresa:</strong> Saffi Consultoria e Treinamentos<br><br>
+
+    Sou um Analista e Desenvolvedor de Sistemas Sênior, atuando de forma estratégica na Saffi Consultoria e Treinamentos. Especializado em análise, design e implementação de soluções tecnológicas inovadoras, destaco-me pela liderança ágil e eficaz colaboração em equipes multifuncionais.<br><br>
+
+    <strong>Responsabilidades Principais:</strong><br>
+    - Desenvolvimento full-stack com proficiência em HTML, CSS, Javascript, PHP, React, MongoDB, Node.js e práticas avançadas de versionamento com GIT.<br>
+    - Especialista em Power BI e Python, incluindo a expertise em BUbble NOW CODE.<br>
+    - Análise de dados, desenvolvimento de sistemas e gerenciamento de infraestrutura.<br>
+    - Automação de processos, administração de licenças, gestão de redes sociais e manutenção do site.<br>
+    - Garantia de uma infraestrutura de WiFi eficiente.<br>
+    - Implementação de sistemas ERP e busca contínua por melhorias de processos.<br>
+    - Trabalho com APIs e metodologias ágeis, como Jira.<br><br>
+
+    <strong>Conquistas e Resultados:</strong><br>
+    - Implementação eficaz de automações nos processos comerciais, especialmente no gerenciamento de oportunidades, otimizando a distribuição de leads e reduzindo o tempo do gestor.<br>
+    - Desenvolvimento de automações para classificação de contatos, segmentando-os em categorias quentes, frios e mornos, contribuindo para estratégias específicas de abordagem e conversão em clientes.<br>
+    - Melhorias significativas no aplicativo oficial da empresa, desde o gerenciamento de usuários até o suporte técnico.<br><br>
+
+    <strong>Setores:</strong><br>
+    - Trabalhei com uma variedade de clientes e setores, incluindo empresas comerciais, financeiras e de projetos.<br><br>
+
+    <strong>Habilidades Adquiridas:</strong><br>
+    - Automação de Processos.<br>
+    - Desenvolvimento de Sistemas.<br>
+    - Gerenciamento de infraestrutura.<br>
+    - Análise de dados.<br>
+    - Controle de acesso.<br>
+    - Gestão de usuários.<br>
+    - Feedbacks de melhorias.<br><br>
+
+    <strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
+</p>
+
+
+
+
+
+</div>
+</div>
+<div class="container right" >
+	<div class="content">
+		<h2 class="titulo_cargo">Analista de Power Bi - Suporte </h2>
+<p class="descricao_atividades">
+<strong>Período:</strong> 04/2022 – 06/2024<br>
+<strong>Cidade:</strong> São Carlos<br>
+<strong>Formato:</strong> CLT<br>
+<strong>Empresa:</strong> Vilaurbe Construtora e incorporadora<br><br>
+
+Gerenciamento e integração de APIs; Gerenciamento do processo de análise dedos; Interpretação das informações coletadas e 
+análise dos resultados; Monitoramento, identificação de oportunidades e insights estratégicos; Elaboração de relatórios técnicos 
+estratégicos para suporte em decisões; Desenvolvimento e implementação de dashboards avançados no Power BI; Versionamento 
+de código (GIT) foco em rastreabilidade e qualidade dos desenvolvimentos; Automação de processos com RPA Python e otimização 
+do tempo de execução operacional; Criação de scripts e procedimentos para análise de dados, utilizando SQL e linguagem DAX; 
+Gerenciamento e modelagem de dados para a manutenção do banco - (MySQL, PostgreSQL, Oracle); Implantação e otimização de 
+sistemas ERP para melhorias e automação dos processos internos; Desenvolvimento de projetos comerciais estratégicos em 
+parceria com a diretoria para alavancagem de vendas;<br><br>
+
+<strong>Responsabilidades Principais:</strong><br>
+Trabalho com metodologias ágeis (Scrum, Kanban, Jira. | Familiaridade com plataformas de nuvem AWS e Oracle. | Experiência em 
+processos ETL para extração, transformação e carga de dados de diferentes fontes.<br><br>
+
+<strong>Conquistas e Resultados:</strong><br>
+- Implementação eficaz de automações nos processos comerciais, especialmente no gerenciamento de oportunidades, otimizando a distribuição de leads e reduzindo o tempo do gestor.<br>
+- Desenvolvimento de automações para classificação de contatos, segmentando-os em categorias quentes, frios e mornos, contribuindo para estratégias específicas de abordagem e conversão em clientes.<br>
+- Melhorias significativas no aplicativo oficial da empresa, desde o gerenciamento de usuários até o suporte técnico.<br><br>
+
+<strong>Setores:</strong><br>
+- Trabalhei com uma variedade de clientes e setores, incluindo empresas comerciais, financeiras e de projetos.<br><br>
+
+<strong>Habilidades Adquiridas:</strong><br>
+- Automação de Processos.<br>
+- Desenvolvimento de Sistemas.<br>
+- Gerenciamento de infraestrutura.<br>
+- Análise de dados.<br>
+- Controle de acesso.<br>
+- Gestão de usuários.<br>
+- Feedbacks de melhorias.<br><br>
+
+<strong>Ferramentas utilizadas:</strong> Python, HTML:5, CSS, JavaScript, RPA, SQL, EXCEL, BIGDATA.
+</p>
+
+
+
+
+					</div>
+			</div>
+			<div class="container left" >
+				<div class="content">
+					<h2 class="titulo_cargo">DATA ANALYTICS (PJ)</h2>
+<p class="descricao_atividades">
+    <strong>Período:</strong> 07/2024 – Atualmente<br>
+    <strong>Cidade:</strong> São Carlos<br>
+    <strong>Formato:</strong> PJ<br>
+    <strong>Empresa:</strong> VILAURBE CONSTRUTORA E INCORPORADORA<br><br>
+
+    Desenvolvimento de ETL e integração de dados; Coleta, extração, transformação e carga ETL de dados; Gerenciamento da 
+estruturação das informações coletadas; Monitoramento e definição de novas melhorias para aplicações futuras; Criação e 
+alimentação de dashboards no Power Bi para suporte às áreas; Desenvolvimento e implementação de bancos de dados MySQL e 
+SQL Server; Implementação de Workflows utilizando Apache Airflow - Ambiente Linux e Aws; Desenvolvimento de soluções 
+analíticas com foco em otimização dos processos; Automação dos processos e desenvolvimentos de relatórios dinâmicos com 
+Streamlit; Criação de rotinas ETL em Python para integração de dados de diferentes fontes; Desenvolvimento das consultas de SQL 
+e análise de dados para geração dos relatórios otimizados para Power Bi; 
+    <strong>Responsabilidades Principais:</strong><br>Possuo experiência avançada com Python e as principais bibliotecas para análise e modelagem de dados, como Pandas, NumPy, Matplotlib e Sklearn, além do desenvolvimento de aplicações analíticas com Streamlit. No gerenciamento e orquestração de dados, faço uso do Apache Airflow, aliado à infraestrutura em AWS e Linux para garantir escalabilidade e desempenho.
+
+Na VilaUrbe, trabalho diretamente com bancos de dados, estruturação e modelagem de informações para apoiar a tomada de decisão estratégica, garantindo eficiência operacional e insights valiosos para os negócios.
+
+<br><br>
+
+    <strong>Conquistas e Resultados:</strong><br>
+    - Implementação eficaz de automações nos processos comerciais, especialmente no gerenciamento de oportunidades, otimizando a distribuição de leads e reduzindo o tempo do gestor.<br>
+    - Desenvolvimento de Aplicações em Streamlit para Reservas de Veiculos, e relatorios para otimização de tempo utilizando banco de dados como fonte de dados.<br><br>
+
+    <strong>Setores:</strong><br>
+    - Atuo em varios setores para criação de relatorios para tomadas de decisão.
+	- Engenharia
+	- Projetos - Novos Negócios
+	- Comercial
+	- Marketing
+	- Administrativo
+	- Financeiro<br><br>
+
+    <strong>Habilidades Adquiridas:</strong><br>
+    - Automação de Processos.<br><br>
+    - Gerenciamento de infraestrutura.<br>
+    - Análise de dados.<br>
+    - Controle de acesso.<br>
+    - Gestão de usuários.<br>
+    - Feedbacks de melhorias.<br><br>
+
+    <strong>Ferramentas utilizadas:</strong> Python, Pandas, Streamlit, NumPy, Matplotlib e Sklearn, RPA, SQL, EXCEL,Apache AirFlow, AWS e Linux </p>
+
+
+
+
+				</div>
+			</div>
+			
+
+		</section>
+		
+		
+		
+
+
+
+		<section id="projetos">
+			<h1>Projetos</h1>
+		  
+			<div id="all-projects">
+		  
+			  <div id="projeto1" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="#" onclick="openPdf('Jornada Python.pdf')">
+				  <div class="card-project">
+					<h2>Escritor</h2>
+					<p>
+					  Escrevi livro sobre essa jornada extraordinária com Python. Mas este livro não é apenas sobre Python; é também sobre a comunidade incrível que a cerca. Através de grupos de estudo, fóruns e eventos.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  <div id="projeto2" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="#" onclick="openPdf('previsaoacoes.pdf')">
+				  <div class="card-project">
+					<h2>Previsão Mercado de Ações</h2>
+					<p>
+					  Estou participando de um projeto empolgante: prever a evolução do mercado financeiro para maximizar ganhos e minimizar perdas. Utilizando análise de dados e habilidades em Python.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  
+		  
+			  <div id="projeto4" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="https://youtu.be/OnRYZ0P79ww" target="_blank">
+				  <div class="card-project">
+					<h2>Automação de Processos RPA</h2>
+					<p>
+					  Automação de processos é uma revolucionária abordagem que nos permite automatizar atividades repetitivas e demoradas, desenvolvimento de scripts complexos.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  
+			</div>
+		  </section>
+		  
+		  <script><section id="projetos">
+			<h1>Projetos</h1>
+		  
+			<div id="all-projects">
+		  
+			  <div id="projeto1" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="#" onclick="openPdf('Jornada Python.pdf')">
+				  <div class="card-project">
+					<h2>Escritor</h2>
+					<p>
+					  Escrevi livro sobre essa jornada extraordinária com Python. Mas este livro não é apenas sobre Python; é também sobre a comunidade incrível que a cerca. Através de grupos de estudo, fóruns e eventos.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  <div id="projeto2" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="#" onclick="openPdf('previsaoacoes.pdf')">
+				  <div class="card-project">
+					<h2>Previsão Mercado de Ações</h2>
+					<p>
+					  Estou participando de um projeto empolgante: prever a evolução do mercado financeiro para maximizar ganhos e minimizar perdas. Utilizando análise de dados e habilidades em Python.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  <div id="projeto3" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="https://youtu.be/EimGLo-W0wY" target="_blank">
+				  <div class="card-project">
+					<h2>Desenvolvimento de Sites Fullstack</h2>
+					<p>
+					  Criar a experiência do usuário por meio de uma interface atraente e amigável, além de implementar a lógica de negócios e funcionalidades que tornam o site realmente poderoso.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  <div id="projeto4" class="projeto-card" onmousemove="gira_sombra(this)" onmouseleave="desgira_sombra(this)">
+				<a href="https://youtu.be/OnRYZ0P79ww" target="_blank">
+				  <div class="card-project">
+					<h2>Automação de Processos RPA</h2>
+					<p>
+					  Automação de processos é uma revolucionária abordagem que nos permite automatizar atividades repetitivas e demoradas, desenvolvimento de scripts complexos.
+					</p>
+				  </div>
+				</a>
+				<div class="card-project-shadow"></div>
+			  </div>
+		  
+			  
+		  
+			  
+			</div>
+
+			
+
+			
+		  </section>
+
+			function openPdf(pdfFileName) {
+				window.open(pdfFileName, '_blank');
+			  }
+			  
+		  </script>
+
+		  <button class="button" id="rodapeButton" onclick="scrollToTop()">
+			Voltar ao Topo
+		</button>
+
+		 
+
+		</section>
+
+		
+	
+	<!-- Scripts at the end of the body for better performance -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/habilidades.js"></script>
+    <script src="js/timeline.js"></script>
+    <script src="js/projetos.js"></script>
+
+    <script>
+        // Custom scripts
+        function openDashboard() {
+            window.location.href = 'dashboard.html';
+        }
+
+        function scrollToTop() {
+            smoothScrollTo(0, 0, 1000);
+        }
+
+        // Smooth scroll function
+        function smoothScrollTo(endX, endY, duration) {
+            const startX = window.scrollX || window.pageXOffset;
+            const startY = window.scrollY || window.pageYOffset;
+            const distanceX = endX - startX;
+            const distanceY = endY - startY;
+            const startTime = new Date().getTime();
+
+            duration = typeof duration !== "undefined" ? duration : 400;
+
+            const easeInOutQuart = (time, from, distance, duration) => {
+                if ((time /= duration / 2) < 1)
+                    return (distance / 2) * time * time * time * time + from;
+                return (
+                    (-distance / 2) * ((time -= 2) * time * time * time - 2) + from
+                );
+            };
+
+            const timer = setInterval(() => {
+                const time = new Date().getTime() - startTime;
+                const newX = easeInOutQuart(time, startX, distanceX, duration);
+                const newY = easeInOutQuart(time, startY, distanceY, duration);
+                if (time >= duration) {
+                    clearInterval(timer);
+                }
+                window.scroll(newX, newY);
+            }, 1000 / 60); // 60 fps
+        }
+    </script>
+
+    
+</body>
+
+</html>
